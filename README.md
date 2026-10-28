@@ -16,6 +16,19 @@ python -m http.server 4173 --directory dist
 
 在 Cloudflare Pages 等静态托管平台部署时，将生产分支设置为 `main`，构建命令留空，发布目录设置为 `dist`。
 
+### 当前正式站点
+
+- 正式地址：<https://mybodysite.pages.dev/>
+- Cloudflare Pages 项目：`mybodysite`
+- 发布方式：Wrangler 直接上传；当前未配置 GitHub 自动部署。
+- 后续更新在完成 Git 提交与推送后，执行：
+
+```sh
+npx wrangler pages deploy dist --project-name mybodysite --branch main
+```
+
+本项目及后续项目默认使用用户自己的 Cloudflare 账号部署，不使用 OpenAI Sites。
+
 ## 目录
 
 ```text
