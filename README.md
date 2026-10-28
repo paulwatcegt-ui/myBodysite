@@ -42,10 +42,10 @@ dist/
 
 ## 截图与开源来源
 
-截图来自 myBody 0.6.0 Android 测试环境，包含测试数据，不代表使用效果。
+官网使用用户本次提供并授权用于官网的三张深色 Android 实机截图：身体总览、变化趋势、阶段照片。截图数值仅展示应用界面，不代表使用效果。
 
 - [myBody 应用源码](https://github.com/paulwatcegt-ui/myBody)
 - [上游 PulseSense](https://github.com/SolarisXD/PulseSense)
 - 许可证：MIT，保留 PulseSense 原版权说明，见 [LICENSE](LICENSE)。
 
-官网参考 myGym 产品官网的信息组织方式，页面代码独立实现。采用浅色视觉、myBody 品牌资源与真实应用截图。
+官网参考 myGym 产品官网的信息组织方式，页面代码独立实现。采用统一深色视觉、myBody 品牌资源与用户提供的真实应用截图。
