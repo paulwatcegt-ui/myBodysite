@@ -20,8 +20,11 @@ python -m http.server 4173 --directory dist
 
 - 正式地址：<https://mybodysite.pages.dev/>
 - Cloudflare Pages 项目：`mybodysite`
-- 发布方式：Wrangler 直接上传；当前未配置 GitHub 自动部署。
-- 后续更新在完成 Git 提交与推送后，执行：
+- 发布方式：GitHub Actions 自动调用 Wrangler 上传至现有 Pages 项目。
+- 推送到 `main` 且包含 `dist/` 或工作流变更时，自动校验、部署并检查官网；只修改文档不会发布。也可在仓库 Actions 页选择 **Deploy website to Cloudflare → Run workflow** 手动发布。
+- 首次授权：在 Cloudflare 创建具有当前账号 **Cloudflare Pages → Edit** 权限的 API Token，在本仓库 **Settings → Secrets and variables → Actions** 添加仓库 Secret `CLOUDFLARE_API_TOKEN`。账号 ID 已写入工作流，无需额外配置。不要使用本机 Wrangler 的临时 OAuth Token。
+- 工作流文件：`.github/workflows/deploy-cloudflare.yml`。若授权缺失或过期，流程会停止并显示具体错误；补充或更新 Secret 后重新运行即可。
+- 应急手动发布命令：
 
 ```sh
 npx wrangler pages deploy dist --project-name mybodysite --branch main
